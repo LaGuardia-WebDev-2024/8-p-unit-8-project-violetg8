@@ -3,9 +3,15 @@ setup = function() {
     size(600, 400);
     background(255,255,255,0);
     
-    drawFish(200, 200, color(200,0,200)); 
-    drawFish(300, 200, color(0,200,200));
+    drawFish(random(600), random(400));
+    drawFish(random(600), random(400));
+    drawFish(random(600), random(400));
+    drawHamster(x,200);
+    drawGoggles(x,200);
+
 };
+
+var x = random(100,400);
 
 //🟢draw Function - will run on repeat
 draw = function(){
@@ -16,13 +22,23 @@ draw = function(){
 mouseClicked = function(){
 
 }
-
-//🟡drawFish Function - will run when called
-var drawFish = function(fishX, fishY, fishColor){
+//Goggles
+var drawGoggles = function(gogglesX, gogglesY){
   textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
+  text("🤿", gogglesX, gogglesY);
 };
+
+//Fish
+var drawFish = function(fishX, fishY){
+  textSize(40);
+  text("🐟", fishX, fishY);
+};
+//Hamster
+var drawHamster = function(hamsterX, hamsterY){
+  textSize(80);
+  text("🐹", hamsterX, hamsterY);
+};
+
 
 
 
